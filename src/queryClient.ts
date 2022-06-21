@@ -49,7 +49,6 @@ export const restFetcher = async ({
       url += "?" + searchParams.toString();
     }
     if (body) fetchOptions.body = JSON.stringify(body);
-
     const res = await fetch(url, fetchOptions);
     const json = await res.json();
     return json;
@@ -63,4 +62,5 @@ export const graphqlFetcher = (query: RequestDocument, variables = {}) =>
 
 export const QueryKeys = {
   PRODUCTS: "PRODUCTS",
+  CART: "CART",
 };
