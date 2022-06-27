@@ -1,5 +1,5 @@
 import { graphql } from "msw";
-import { GET_CART, ADD_CART, CartType } from "../graphql/cart";
+import { GET_CART, ADD_CART, CartType, UPDATE_CART } from "../graphql/cart";
 import GET_PRODUCTS, { GET_PRODUCT } from "../graphql/products";
 
 const mockProducts = (() =>
@@ -28,7 +28,6 @@ export const handlers = [
     return res();
   }),
   graphql.query(GET_CART, (req, res, ctx) => {
-    console.log("ab");
     return res(ctx.data(cartData));
   }),
   graphql.mutation(ADD_CART, (req, res, ctx) => {
@@ -50,5 +49,19 @@ export const handlers = [
     }
     cartData = newData;
     return res(ctx.data(newData));
+  }),
+  graphql.mutation(UPDATE_CART, (req, res, ctx) => {
+    const newData = { ...cartData };
+    const { id, amount } = req.variables;
+    if (!newData[id]) {
+      throw new Error("없는 데이터입니다");
+    }
+    const newItem = {
+      ...newData[id],
+      amount,
+    };
+    newData[id] = newItem;
+    cartData = newData;
+    return res(ctx.data(newItem));
   }),
 ];
