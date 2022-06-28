@@ -1,9 +1,12 @@
-import { SyntheticEvent } from "react";
+import { ForwardedRef, forwardRef, SyntheticEvent } from "react";
 import { useMutation } from "react-query";
 import { CartType, DELETE_CART, UPDATE_CART } from "../../graphql/cart";
 import { getClient, graphqlFetcher, QueryKeys } from "../../queryClient";
 
-const CartItem = ({ id, imageUrl, price, title, amount }: CartType) => {
+const CartItem = (
+  { id, imageUrl, price, title, amount }: CartType,
+  ref: ForwardedRef<HTMLInputElement>
+) => {
   const queryClient = getClient();
   const { mutate: updateCart } = useMutation(
     ({ id, amount }: { id: string; amount: number }) =>
@@ -48,6 +51,7 @@ const CartItem = ({ id, imageUrl, price, title, amount }: CartType) => {
 
   const handleUpdateAmount = (e: SyntheticEvent) => {
     const amount = Number((e.target as HTMLInputElement).value);
+    if (amount < 1) return;
     updateCart({ id, amount });
   };
 
@@ -57,7 +61,12 @@ const CartItem = ({ id, imageUrl, price, title, amount }: CartType) => {
 
   return (
     <li className="cart-item">
-      <input className="cart-item__checkbox" type="checkbox" />
+      <input
+        className="cart-item__checkbox"
+        type="checkbox"
+        name="select-item"
+        ref={ref}
+      />
       <img className="cart-item__image" src={imageUrl} />
       <p className="cart-item__price">{price}</p>
       <p className="cart-item__title">{title}</p>
@@ -65,6 +74,7 @@ const CartItem = ({ id, imageUrl, price, title, amount }: CartType) => {
         className="cart-item__amount"
         type="number"
         value={amount}
+        min={1}
         onChange={handleUpdateAmount}
       />
       <button
@@ -78,4 +88,4 @@ const CartItem = ({ id, imageUrl, price, title, amount }: CartType) => {
   );
 };
 
-export default CartItem;
+export default forwardRef(CartItem);
