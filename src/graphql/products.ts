@@ -1,5 +1,6 @@
 import { gql } from "graphql-tag";
 
+//상품목록 Graphql
 export type Product = {
   id: string;
   imageUrl: string;

@@ -1,42 +1,34 @@
-import { useNavigate } from "react-router-dom";
+import { SyntheticEvent } from "react";
 import { useRecoilValue } from "recoil";
 import { checkedCartState } from "../../recoils/cart";
-import ItemData from "./itemData";
+import ItemData from "../cart/itemData";
 
-const WillPay = () => {
-  const navigate = useNavigate();
+const WillPay = ({
+  handleSubmit,
+  submitTitle,
+}: {
+  submitTitle: string;
+  handleSubmit: (e: SyntheticEvent) => void;
+}) => {
   const checkeditems = useRecoilValue(checkedCartState);
   const totalPrice = checkeditems.reduce((res, { amount, price }) => {
     res += amount * price;
     return res;
   }, 0);
 
-  const handleSubmit = () => {
-    if (checkeditems.length) {
-      navigate("/payment");
-    } else {
-      alert("장바구니가 비었어요");
-    }
-  };
-
   return (
     <div className="cart-willpay">
       <ul>
         {checkeditems.map(({ imageUrl, price, title, id, amount }) => (
-          <li>
-            <ItemData
-              imageUrl={imageUrl}
-              price={price}
-              title={title}
-              key={id}
-            />
+          <li key={id}>
+            <ItemData imageUrl={imageUrl} price={price} title={title} />
             <p>수량: {amount}</p>
             <p>금액: {price * amount}</p>
           </li>
         ))}
       </ul>
       <p>총예상결제액: {totalPrice}</p>
-      <button onClick={handleSubmit}>결제하기</button>
+      <button onClick={handleSubmit}>{submitTitle}</button>
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import { Product } from "../../graphql/products";
 
+//상품목록 세부정보 페이지
 const ProductDetail = ({
   item: { title, imageUrl, description, price },
 }: {

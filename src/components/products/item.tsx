@@ -4,6 +4,7 @@ import { ADD_CART } from "../../graphql/cart";
 import { Product } from "../../graphql/products";
 import { graphqlFetcher } from "../../queryClient";
 
+//상품목록 메인 페이지
 const ProductItem = ({
   id,
   imageUrl,

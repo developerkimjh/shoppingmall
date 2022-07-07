@@ -1,5 +1,6 @@
 import { gql } from "graphql-tag";
 
+//장바구니 Graphql
 export type CartType = {
   id: string;
   imageUrl: string;
