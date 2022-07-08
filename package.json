@@ -1,0 +1,17 @@
+{
+  "name": "shopping-mall",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/developerkimjh/shoppigmallreact.git",
+  "author": "= <=>",
+  "license": "MIT",
+  "private": true,
+  "workspaces" : [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "client": "yarn workspace client run dev"
+  }
+  
+}

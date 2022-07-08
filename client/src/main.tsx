@@ -17,6 +17,5 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         <App />
       </BrowserRouter>
     </RecoilRoot>
-    <div>commit test</div>
   </React.StrictMode>
 );
