@@ -1,15 +1,15 @@
 import express from "express";
 import { ApolloServer } from "apollo-server-express";
+import schema from "./schema";
+import resolvers from "./resolvers";
 
 (async () => {
-  const server = new ApolloServer(null);
-  /*
+  const server = new ApolloServer({
     typeDefs: schema,
     resolvers,
-    context: {
+    context: {},
+  });
 
-    }
-*/
   const app = express();
   await server.start();
   server.applyMiddleware({
