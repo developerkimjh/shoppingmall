@@ -581,7 +581,7 @@
   resolved "https://registry.yarnpkg.com/@tsconfig/node14/-/node14-1.0.3.tgz#e4386316284f00b98435bf40f72f75a09dabf6c1"
   integrity sha512-ysT8mhdixWK6Hw3i1V2AeRqZ5WfXg1G43mqoYlM2nc6388Fq5jcXyr5mRsqViLx/GJYdoL0bfXD8nmF+Zn/Iow==
 
-"@tsconfig/node16@^1.0.2":
+"@tsconfig/node16@^1.0.2", "@tsconfig/node16@^1.0.3":
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/@tsconfig/node16/-/node16-1.0.3.tgz#472eaab5f15c1ffdd7f8628bd4c4f753995ec79e"
   integrity sha512-yOlFc+7UtL/89t2ZhjPvvB/DeAr3r+Dq58IgzsFkOAvVC6NMJXmCGjbptdXdR9qsX7pKcTL+s87FtYREi2dEEQ==
@@ -892,7 +892,7 @@ apollo-server-errors@^3.3.1:
   resolved "https://registry.yarnpkg.com/apollo-server-errors/-/apollo-server-errors-3.3.1.tgz#ba5c00cdaa33d4cbd09779f8cb6f47475d1cd655"
   integrity sha512-xnZJ5QWs6FixHICXHxUfm+ZWqqxrNuPlQ+kj5m6RtEgIpekOPssH/SD9gf2B4HuWV0QozorrygwZnux8POvyPA==
 
-apollo-server-express@^3.9.0:
+apollo-server-express@^3.6.4, apollo-server-express@^3.9.0:
   version "3.9.0"
   resolved "https://registry.yarnpkg.com/apollo-server-express/-/apollo-server-express-3.9.0.tgz#1ff3b53fe76e4e8be04b8477ea8a3d9586313af1"
   integrity sha512-scSeHy9iB7W3OiF3uLQEzad9Jm9tEfDF8ACsJb2P+xX69uqg6zizsrQvj3qRhazCO7FKMcMu9zQFR0hy7zKbUA==
@@ -926,7 +926,7 @@ apollo-server-types@^3.6.1:
     apollo-reporting-protobuf "^3.3.1"
     apollo-server-env "^4.2.1"
 
-apollo-server@^3.9.0:
+apollo-server@^3.6.4:
   version "3.9.0"
   resolved "https://registry.yarnpkg.com/apollo-server/-/apollo-server-3.9.0.tgz#391b60c4c24d37c65855cccc8aa886e684bc1776"
   integrity sha512-g80gXDuK8fl2W0fQF/hEyeoO9AU+sO2gBzeJAYUyGLotYc+oL/Y3mTRk5GB8C7cXUXCg5uvWbUj8va0E5UZE7w==
@@ -1531,7 +1531,7 @@ events@^3.3.0:
   resolved "https://registry.yarnpkg.com/events/-/events-3.3.0.tgz#31a95ad0a924e2d2c419a813aeb2c4e878ea7400"
   integrity sha512-mQw+2fkQbALzQ7V0MY0IqdnXNOeTtP4r0lN9z7AAawCXgqea7bDii20AYrIBrFd/Hx0M2Ocz6S111CaFkUcb0Q==
 
-express@^4.17.1, express@^4.18.1:
+express@^4.17.1:
   version "4.18.1"
   resolved "https://registry.yarnpkg.com/express/-/express-4.18.1.tgz#7797de8b9c72c857b9cd0e14a5eea80666267caf"
   integrity sha512-zZBcOX9TfehHQhtupq57OF8lFZ3UZi08Y97dwFCkD8p9d/d2Y3M+ykKcwaMDEL+4qyUolgBDX6AblpR3fL212Q==
@@ -2710,7 +2710,7 @@ type-is@~1.6.18:
     media-typer "0.3.0"
     mime-types "~2.1.24"
 
-typescript@^4.6.3:
+typescript@^4.6.3, typescript@^4.7.4:
   version "4.7.4"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.7.4.tgz#1a88596d1cf47d59507a1bcdfb5b9dfe4d488235"
   integrity sha512-C0WQT0gezHuw6AdY1M2jxUO83Rjf0HP7Sk1DtXj6j1EwkQNZrHAg2XPWlq62oqEhYvONq5pkC2Y9oPljWToLmQ==

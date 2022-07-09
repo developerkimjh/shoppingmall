@@ -3,15 +3,15 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/developerkimjh/shoppigmallreact.git",
-  "author": "= <=>",
+  "author": "developerkimjh <developerkimjh@gmail.com>",
   "license": "MIT",
   "private": true,
-  "workspaces" : [
+  "workspaces": [
     "client",
     "server"
   ],
   "scripts": {
-    "client": "yarn workspace client run dev"
+    "client": "yarn workspace client run dev",
+    "server": "yarn workspace server run dev"
   }
-  
 }
