@@ -4,6 +4,13 @@
 
 body {
   margin: 0;
+  background-color: grey;
+}
+
+.gnb {
+  width: 100%;
+  padding: 10px;
+  background-color: white;
 }
 
 ul {
@@ -11,11 +18,12 @@ ul {
   list-style: none;
 }
 
-#root {
+h2 {
+  padding: 10px;
   max-width: 900px;
   margin: 0 auto;
-  padding: 0 10px;
 }
+
 .gnb {
   ul {
     padding: 0;
