@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Gnb = () => (
   <nav className="gnb">
-    <ul>
+    <ul className="gnbcenter">
       <li>
         <Link to="/">홈</Link>
       </li>

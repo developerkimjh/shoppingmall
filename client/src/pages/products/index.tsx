@@ -10,7 +10,6 @@ const ProductListPage = () => {
 
   return (
     <div>
-      <h2>상품목록</h2>
       <ProductList list={data?.products || []} />
     </div>
   );

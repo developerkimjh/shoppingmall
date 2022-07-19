@@ -74,7 +74,7 @@ const CartList = ({ items }: { items: CartType[] }) => {
   }, [items, formData]);
 
   return (
-    <form ref={formRef} onChange={handleCheckboxChanged}>
+    <form ref={formRef} onChange={handleCheckboxChanged} className="cartform">
       <label>
         <input className="select-all" name="select-all" type="checkbox" />
         전체선택

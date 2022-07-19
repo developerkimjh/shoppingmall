@@ -1,0 +1,25 @@
+.gnb {
+    width: 100%;
+    margin: 0;
+    padding: 20px 0;
+    background-color: white;
+    display: flex;
+  }
+
+  .gnb {
+    ul {
+      padding: 0;
+      list-style: none;
+      flex-direction: row;
+      gap: 10px;
+    }
+  }
+
+  .gnbcenter {
+    margin: 0 auto;
+    a {
+        text-align: center;
+        text-decoration: none;
+        color: black;
+    }
+  }

@@ -1,16 +1,17 @@
 @import 'products';
 @import 'cart';
 @import 'payment';
+@import 'gnb';
 
 body {
   margin: 0;
-  background-color: grey;
+  background-color: #e9e9e9;
+  font-family: "Malgun Gothic";
 }
 
-.gnb {
-  width: 100%;
-  padding: 10px;
-  background-color: white;
+a {
+  text-decoration: none;
+  color: black;
 }
 
 ul {
@@ -20,7 +21,7 @@ ul {
 
 h2 {
   padding: 10px;
-  max-width: 900px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 

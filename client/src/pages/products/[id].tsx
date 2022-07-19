@@ -15,7 +15,6 @@ const ProductDetailPage = () => {
 
   return (
     <div>
-      <h2>상품상세</h2>
       <ProductDetail item={data} />
     </div>
   );
