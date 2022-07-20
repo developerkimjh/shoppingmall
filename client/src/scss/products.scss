@@ -9,28 +9,31 @@
 }
 
 .product-item {
-padding: 10px;
-background-color: #fff;
-transition: box-shadow .3s;
-border-radius: 5px;
+  padding: 10px;
+  background-color: #fff;
+  transition: box-shadow .3s;
+  border-radius: 5px;
 
-.products-item__price {
-  display: flex;
-}
-
-button {
-  display: flex;
-  float: right;
-}
+  button {
+    display: flex;
+    float: right;
+  }
 }
 
 .product-item:hover {
 box-shadow: 0 0 30px rgba(11,11,11,0.4); 
 }
 
-
 .products-detail {
-max-width: 1115px;
-margin: 0 auto;
-padding: 20px 0;
+  max-width: 1115px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.price-label {
+  font-size: 18px;
+  font-family: "Tahoma";
+  font-weight: bold;
+  color: #ae0000;
+  margin-right: 3px;
 }

@@ -3,7 +3,7 @@ import { routes } from "./routes";
 import { useRoutes } from "react-router-dom";
 import { getClient } from "./queryClient";
 import { ReactQueryDevtools } from "react-query/devtools";
-import Gnb from "./components/gnb";
+import Gnb from "./components/gnb/gnb";
 
 const App = () => {
   const elem = useRoutes(routes);

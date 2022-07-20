@@ -1,25 +1,52 @@
 .gnb {
     width: 100%;
     margin: 0;
-    padding: 20px 0;
     background-color: white;
     display: flex;
-  }
 
-  .gnb {
-    ul {
-      padding: 0;
-      list-style: none;
-      flex-direction: row;
-      gap: 10px;
+    .gnbleft {
+        position: absolute;
+        padding-left: 10px;
+        .logo {
+            width: 150px;
+            height: 75px;
+        }
     }
-  }
 
-  .gnbcenter {
-    margin: 0 auto;
-    a {
-        text-align: center;
-        text-decoration: none;
-        color: black;
-    }
-  }
+    .gnbcenter {
+        padding: 30px 0 30px 0;
+        margin: 0 auto;
+        a {
+            padding: 20px 10px 12px 10px;
+            font-size: 17px;      
+            text-align: center;
+            text-decoration: none;
+            color: black;
+        }
+        a:hover {
+            color: red;
+        }
+
+      }
+      
+}
+.a:hover {
+    border-bottom-style: solid;
+    border-bottom-color: coral;
+}
+
+.clicked {
+    color: gold;
+}
+
+
+.abc {
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    border-radius: 3px;
+    background-color: rgb(255, 107, 0);
+    transform: translateX(1000px);
+    width: 65px;
+    transition-duration: 0.3s;
+}
