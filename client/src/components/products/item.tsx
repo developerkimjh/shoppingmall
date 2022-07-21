@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ADD_CART } from "../../graphql/cart";
 import { Product } from "../../graphql/products";
 import { graphqlFetcher } from "../../queryClient";
+import cart from "../../img/cart.png";
 
 //상품목록 메인 페이지
 const ProductItem = ({
@@ -16,6 +17,10 @@ const ProductItem = ({
   const { mutate: addCart } = useMutation((id: string) =>
     graphqlFetcher(ADD_CART, { id })
   );
+  const cartClick = () => {
+    addCart(id);
+    alert(`장바구니에 ${title} 상품이 담겼습니다.`);
+  };
 
   return (
     <li className="product-item">
@@ -27,9 +32,7 @@ const ProductItem = ({
           <label className="price-label">{priceToString(price)}</label>원
         </span>
       </Link>
-      <button className="product-ite__add-cart" onClick={() => addCart(id)}>
-        담기
-      </button>
+      <img src={cart} className="product-ite__add-cart" onClick={cartClick} />
     </li>
   );
 };
