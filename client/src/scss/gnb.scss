@@ -19,7 +19,7 @@
         position: absolute;
         bottom: 0;
         left: 0;
-        background-color:#EA7123;
+        background-color: rgba(255, 65, 65);
         width: 0;
         height: 3px;
         transition: 0.4s; 
@@ -45,7 +45,7 @@
             color: black;
         }
         a:hover{
-            color: #EA7123;
+            color: rgba(255, 65, 65);
         }
       }
       

@@ -35,7 +35,7 @@ const Payment = () => {
   };
 
   return (
-    <div>
+    <div className="payment-window">
       <WillPay handleSubmit={showModal} submitTitle="결제하기" />
       <PaymentModal show={ModalShow} proceed={proceed} cancel={cancle} />
     </div>

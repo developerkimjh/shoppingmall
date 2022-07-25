@@ -19,9 +19,8 @@
     height: 25px;
     display: flex;
     float: right;
-    border: solid 1px grey;
     transition: box-shadow .3s;
-    border-radius: 5px;
+    border-radius: 4px;
   }
 }
 
@@ -39,10 +38,3 @@ box-shadow: 0 0 30px rgba(11,11,11,0.4);
   padding: 20px 0;
 }
 
-.price-label {
-  font-size: 18px;
-  font-family: "Tahoma";
-  font-weight: bold;
-  color: #ae0000;
-  margin-right: 3px;
-}

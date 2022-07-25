@@ -63,28 +63,34 @@ const CartItem = (
 
   return (
     <li className="cart-item">
-      <input
-        className="cart-item__checkbox"
-        type="checkbox"
-        name="select-item"
-        ref={ref}
-        data-id={id}
-      />
+      <label className="small-container">
+        <input
+          className="cart-item__checkbox"
+          type="checkbox"
+          name="select-item"
+          ref={ref}
+          data-id={id}
+        />
+        <div className="checkmark"></div>
+      </label>
       <ItemData imageUrl={imageUrl} price={price} title={title} />
-      <input
-        className="cart-item__amount"
-        type="number"
-        value={amount}
-        min={1}
-        onChange={handleUpdateAmount}
-      />
-      <button
-        className="cart-item__button"
-        type="button"
-        onClick={handleDeleteItem}
-      >
-        삭제
-      </button>
+      <div className="cart-update">
+        <label className="amount-label">수량 : </label>
+        <input
+          className="cart-item__amount"
+          type="number"
+          value={amount}
+          min={1}
+          onChange={handleUpdateAmount}
+        />
+        <button
+          className="cart-item__button"
+          type="button"
+          onClick={handleDeleteItem}
+        >
+          삭제
+        </button>
+      </div>
     </li>
   );
 };

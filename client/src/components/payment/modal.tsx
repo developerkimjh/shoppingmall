@@ -1,4 +1,3 @@
-import { ReactChild } from "react";
 import { createPortal } from "react-dom";
 
 const ModalPortal = ({ children }: any) => {
@@ -18,7 +17,7 @@ const PaymentModal = ({
     <ModalPortal>
       <div className={`modal ${show ? "show" : ""}`}>
         <div className="modal__inner">
-          <p>정말 결제할까요?</p>
+          <p> 말 결제할까요?</p>
           <div>
             <button onClick={proceed}>예</button>
             <button onClick={cancel}>아니요</button>

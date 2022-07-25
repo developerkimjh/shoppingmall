@@ -2,6 +2,8 @@ import { SyntheticEvent } from "react";
 import { useRecoilValue } from "recoil";
 import { checkedCartState } from "../../recoils/cart";
 import ItemData from "../cart/itemData";
+import WillPayData from "../cart/willPayData";
+import { priceToString } from "../products/item";
 
 const WillPay = ({
   handleSubmit,
@@ -20,15 +22,34 @@ const WillPay = ({
     <div className="cart-willpay">
       <ul>
         {checkeditems.map(({ imageUrl, price, title, id, amount }) => (
-          <li key={id}>
-            <ItemData imageUrl={imageUrl} price={price} title={title} />
-            <p>수량: {amount}</p>
-            <p>금액: {price * amount}</p>
+          <li key={id} className="willpay-product">
+            <WillPayData imageUrl={imageUrl} price={price} title={title} />
+            <p>
+              <label className="willpay-amount">수량:</label>
+              <label className="amount-label">{amount}</label>
+            </p>
+            <p>
+              <label className="willpay-price">총 금액:</label>{" "}
+              <label className="price-label">
+                {priceToString(price * amount)}
+              </label>
+              원
+            </p>
           </li>
         ))}
       </ul>
-      <p>총예상결제액: {totalPrice}</p>
-      <button onClick={handleSubmit}>{submitTitle}</button>
+      <div className="payment">
+        <p className="payment-label">
+          총 주문금액:{" "}
+          <label className="price-label">{priceToString(totalPrice)}</label> 원
+        </p>
+        <button className="learn-more" onClick={handleSubmit}>
+          <span className="circle" aria-hidden="true">
+            <span className="icon arrow"></span>
+          </span>
+          <span className="button-text">{submitTitle}</span>
+        </button>
+      </div>
     </div>
   );
 };

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { ADD_CART } from "../../graphql/cart";
 import { Product } from "../../graphql/products";
 import { graphqlFetcher } from "../../queryClient";
-import cart from "../../img/cart.png";
+import cart1 from "../../img/cart1.png";
 
 //상품목록 메인 페이지
 const ProductItem = ({
@@ -32,7 +32,7 @@ const ProductItem = ({
           <label className="price-label">{priceToString(price)}</label>원
         </span>
       </Link>
-      <img src={cart} className="product-ite__add-cart" onClick={cartClick} />
+      <img src={cart1} className="product-ite__add-cart" onClick={cartClick} />
     </li>
   );
 };

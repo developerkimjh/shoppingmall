@@ -52,6 +52,7 @@ const CartList = ({ items }: { items: CartType[] }) => {
       nevigate("/payment");
     } else {
       alert("장바구니가 비었어요");
+      event?.preventDefault();
     }
   };
 
@@ -75,10 +76,13 @@ const CartList = ({ items }: { items: CartType[] }) => {
 
   return (
     <form ref={formRef} onChange={handleCheckboxChanged} className="cartform">
-      <label>
-        <input className="select-all" name="select-all" type="checkbox" />
-        전체선택
-      </label>
+      <div className="check-box">
+        <label className="big-container">
+          <input className="select-all" name="select-all" type="checkbox" />
+          <div className="checkmark"></div>
+        </label>
+        <p className="check-all">전체선택</p>
+      </div>
       <ul className="cart">
         {items.map((item, i) => (
           <CartItem {...item} key={item.id} ref={checkboxRefs[i]} />
